@@ -1,35 +1,38 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { assets } from "./../assets/assets";
 import PropTypes from 'prop-types';
+import { StoreContext } from "../context/StoreContext";
 
 const FoodItem = ({ id, name, price, description, image }) => {
-  const [itemCount, setItemCount] = useState(0);
+
+  const {cartItems, addToCart ,removeFromCart} = useContext(StoreContext);
 
   return (
     <div className="rounded-lg hover:scale-105 shadow-lg relative">
       <div className="food-item-image">
         <img className="rounded-t-lg w-full" src={image} alt={name} />
-        {itemCount === 0 ? (
+        {!cartItems[id] 
+        ? (
           <img 
             src={assets.add_icon_white} 
             alt="Add" 
             className="absolute w-9 bottom-24 right-2 cursor-pointer rounded-full" 
-            onClick={() => setItemCount(prev => prev + 1)} 
+            onClick={() => addToCart(id)} 
           />
         ) : (
           <div className="absolute  bottom-24 right-3 flex items-center gap-2 p-1 rounded-full bg-white">
             <img 
               src={assets.remove_icon_red} 
               alt="Remove" 
-              className="cursor-pointer" 
-              onClick={() => setItemCount(prev => prev - 1)} 
+              className="cursor-pointer w-6" 
+              onClick={() => removeFromCart(id)} 
             />
-            <p className="">{itemCount}</p>
+            <p className="">{cartItems[id]}</p>
             <img 
               src={assets.add_icon_green} 
               alt="Add" 
-              className="cursor-pointer" 
-              onClick={() => setItemCount(prev => prev + 1)} 
+              className="cursor-pointer w-6" 
+              onClick={() => addToCart(id)} 
             />
           </div>
         )}

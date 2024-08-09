@@ -3,7 +3,7 @@ import { assets } from "./../assets/assets";
 const Header = () => {
   return (
     <div className="flex h-1/3 m-5 justify-center items-center relative rounded-lg">
-  <div className="relative z-50 p-6 text-center">
+  <div className="relative z-10 p-6 text-center">
     <h2 className="text-black font-bold text-4xl mb-5">
       Order Your Favourite Food Here!
     </h2>
@@ -12,7 +12,7 @@ const Header = () => {
       Our mission is to provide the best food experience to our customers.
     </p>
     <div className="text-center">
-      <button className="bg-red-950 text-sm text-white px-5 py-2 rounded-full hover:bg-red-800">
+      <button className="bg-red-950  text-sm text-white px-5 py-2 rounded-full hover:bg-red-800">
         View Menu
       </button>
     </div>
