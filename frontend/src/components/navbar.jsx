@@ -11,18 +11,18 @@ const Navbar = ({setShowLogin}) => {
         const {getTotalCartAmount,getTotalCartItems} = useContext(StoreContext);
 
   return (
-    <div className="bg-red-200 px-5 py-0 flex justify-between items-center">
+    <div className="bg-red-200 px-5 py-0  flex justify-between items-center">
       <Link to='/' >
       <img src={assets.logoo} alt="logo" className="h-20" />
       </Link>
 
-      <ul className="flex list-none gap-5 text-red-500 text-lg cursor-pointer">
+      <ul className="flex list-none gap-5 text-red-500 text-xs md:text-lg cursor-pointer">
         <Link to='/' onClick={()=>setMenu("home")} className={menu==="home"?"pb-1  border-b-2 border-red-500":""}>Home</Link>
         <a href="#explore-menu" onClick={()=>setMenu("menu")} className={menu==="menu"?"pb-1  border-b-2 border-red-500":""}>Menu</a>
         <a href="#app-download" onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"pb-1  border-b-2 border-red-500":""}>Mobile-app</a>
         <a href="#footer" onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"pb-1  border-b-2 border-red-500":""}>Contact us</a>
       </ul>
-      <div className="flex items-center gap-10">
+      <div className="flex items-center md:gap-10 gap-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -52,7 +52,7 @@ const Navbar = ({setShowLogin}) => {
           </div>
         </div>
 
-        <button onClick={()=>setShowLogin(true)} className="bg-red-950 text-white px-5 py-2 rounded-full hover:bg-red-500 ">
+        <button onClick={()=>setShowLogin(true)} className="bg-red-950 text-white px-5 text-xs py-2 rounded-full hover:bg-red-500 ">
           sign in
         </button>
       </div>

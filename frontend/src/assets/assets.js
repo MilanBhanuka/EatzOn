@@ -2,6 +2,7 @@ import basket_icon from './basket_icon.png'
 import logo from './logo.png'
 import logoo from './logoo.png'
 import header_img from './header_img.png'
+import header_img_2 from './header_02.jpg'
 import search_icon from './search_icon.png'
 import menu_1 from './menu_1.png'
 import menu_2 from './menu_2.png'
@@ -66,6 +67,7 @@ export const assets = {
     logoo,
     basket_icon,
     header_img,
+    header_img_2,
     search_icon,
     rating_starts,
     add_icon_green,

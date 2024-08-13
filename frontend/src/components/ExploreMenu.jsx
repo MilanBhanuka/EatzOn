@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ExploreMenu = ({ category, setCategory }) => {
   return (
-    <div className="flex flex-col mt-8 mx-20" id="explore-menu">
+    <div className="flex flex-col mt-8 md:mx-20 mx-10" id="explore-menu">
       <h1 className="text-black font-bold text-2xl ">ExploreOur Menu</h1>
       <p className="mb-4">Choose from a variety of delicious dishes </p>
       <div className="flex justify-between items-center gap-10 text-center overflow-x-scroll no-scrollbar">

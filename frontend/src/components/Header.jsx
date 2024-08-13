@@ -2,28 +2,31 @@ import { assets } from "./../assets/assets";
 
 const Header = () => {
   return (
-    <div className="flex h-1/3 m-5 justify-center items-center relative rounded-lg">
-  <div className="relative z-10 p-6 text-center">
-    <h2 className="text-black font-bold text-4xl mb-5">
-      Order Your Favourite Food Here!
-    </h2>
-    <p className="font-bold mb-5">
-      Choose from a diverse menu featuring a variety of cuisines and dishes.
-      Our mission is to provide the best food experience to our customers.
-    </p>
-    <div className="text-center">
-      <button className="bg-red-950  text-sm text-white px-5 py-2 rounded-full hover:bg-red-800">
-        View Menu
-      </button>
+    <div className="flex  my-32  justify-center items-start relative rounded-lg">
+      <div className="relative flex h-96   z-10 p-6 justify-center items-center  text-center">
+        <div className="text-white">
+          <h2 className="text-white font-bold text-3xl md:text-5xl mb-5">
+            Order Your Favourite Food Here!
+          </h2>
+          <p className="font-bold text-xs md:text-lg mb-5">
+            Choose from a diverse menu featuring a variety of cuisines and
+            dishes.
+            <br />
+            Our mission is to provide the best food experience to our customers.
+          </p>
+          <div className="text-center">
+            <button className="bg-red-950  text-sm text-white px-5 py-2 rounded-full hover:bg-red-800">
+              View Menu
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src={assets.header_img_2}
+        className="absolute w-10/12 h-96 object-cover bg-repeat opacity-85  rounded-lg"
+      />
     </div>
-  </div>
-
-  <img
-    src={assets.header_img}
-    className="absolute w-11/12 object-cover bg-repeat opacity-85 h-full rounded-lg"
-  />
-</div>
-
   );
 };
 
