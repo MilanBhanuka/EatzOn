@@ -25,7 +25,7 @@ const Cart = () => {
             if (cartItems[item._id] > 0) {
               return (
                 <div
-                  key={item._id}
+                  key={index}
                   className="grid grid-cols-8 bg-red-100 justify-center items-center rounded-lg "
                 >
                   <img

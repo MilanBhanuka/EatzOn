@@ -25,3 +25,10 @@ a{
 .app{
   margin: 0 auto;
 }
+
+.active{
+  color: rgb(170, 0, 0);
+  background: #ffffff;
+  font-size: x-large
+}
+
