@@ -10,7 +10,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="mt-10 p-6">
+    <div className="mt-10 p-6 text-lg">
       <div className="cart-items">
         <div className="grid grid-cols-8 bg-red-400 justify-center items-center rounded-lg mb-2 py-1">
           <p className="col-span-2 justify-center flex">Image</p>
