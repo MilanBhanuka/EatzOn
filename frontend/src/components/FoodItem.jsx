@@ -5,12 +5,12 @@ import { StoreContext } from "../context/StoreContext";
 
 const FoodItem = ({ id, name, price, description, image }) => {
 
-  const {cartItems, addToCart ,removeFromCart} = useContext(StoreContext);
+  const {cartItems, addToCart ,removeFromCart,url} = useContext(StoreContext);
 
   return (
     <div className="rounded-lg hover:scale-105 shadow-lg relative">
       <div className="food-item-image">
-        <img className="rounded-t-lg w-full" src={image} alt={name} />
+        <img className="rounded-t-lg w-full" src={url+"/images/"+image} alt={name} />
         {!cartItems[id] 
         ? (
           <img 
@@ -37,7 +37,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           </div>
         )}
       </div>
-      <div className="px-4 py-1">
+      <div className="px-4 ">
         <div className="flex justify-between items-baseline">
           <h2 className="text-red-900 font-semibold text-sm md:text-lg">{name}</h2>
           <img src={assets.rating_starts} alt="star" className="w-10 h-3 md:w-20 md:h-5" />

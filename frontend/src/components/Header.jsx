@@ -24,7 +24,7 @@ const Header = () => {
 
       <img
         src={assets.header_img_2}
-        className="absolute w-10/12 h-96 object-cover bg-repeat opacity-85  rounded-lg"
+        className="absolute w-10/12 h-96 object-cover bg-repeat  rounded-lg"
       />
     </div>
   );

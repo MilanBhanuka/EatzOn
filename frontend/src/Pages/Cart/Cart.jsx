@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount ,url} =
     useContext(StoreContext);
 
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const Cart = () => {
                 >
                   <img
                     className="col-span-2 h-24 rounded-l-lg"
-                    src={item.image}
+                    src={url+"/images/"+item.image}
                     alt="food"
                   />
                   <p className="col-span-2 justify-center flex ">{item.name}</p>

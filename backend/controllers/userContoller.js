@@ -12,23 +12,23 @@ const loginUser = async (req, res) => {
 
                 // check if user exists
                 if(!user){
-                        return res.json({sucscess: false, message: "User Not Found"});
+                        return res.json({success: false, message: "User Not Found"});
                 }
 
                 // check if password is correct
                 const isMatch = await bcrypt.compare(password, user.password);
 
                 if(!isMatch){
-                        return res.json({sucscess: false, message: "Invalid Credentials"});
+                        return res.json({success: false, message: "Invalid Credentials"});
                 }
 
                 // create token
                 const token = createToken(user._id);
-                res.json({sucscess: true, token});
+                res.json({success: true, token});
 
         }catch(error){
                 console.log(error);
-                res.json({sucscess: false, message: "Internal Server Error"});
+                res.json({success: false, message: "Internal Server Error"});
         }
 }
 
@@ -46,15 +46,15 @@ const registerUser = async (req, res) => {
                 // check if user already exists
                 const exists = await userModel.findOne({email});
                 if(exists){
-                        return res.json({sucscess: false, message: "User Already Exists"});
+                        return res.json({success: false, message: "User Already Exists"});
                 }
 
                 // validating email and password
                 if(!validator.isEmail(email)){
-                        return res.json({sucscess: false, message: "Please enter a valid email"});
+                        return res.json({success: false, message: "Please enter a valid email"});
                 }
                 if(password.length < 8){
-                        return res.json({sucscess: false, message: "Password must be atleast 8 characters long"});
+                        return res.json({success: false, message: "Password must be atleast 8 characters long"});
                 }
 
                 // hashing password
@@ -73,12 +73,12 @@ const registerUser = async (req, res) => {
                 const token = createToken(user._id);
 
                 // sending response
-                res.json({sucscess: true, token: token})
+                res.json({success: true, token: token})
 
 
         }catch(error){
                 console.log(error);
-                res.json({sucscess: false, message: "Internal Server Error"});
+                res.json({success: false, message: "Internal Server Error"});
         }
 }
 
