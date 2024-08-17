@@ -12,7 +12,7 @@ const Cart = () => {
   return (
     <div className="mt-10 p-6 text-lg">
       <div className="cart-items">
-        <div className="grid grid-cols-8 bg-red-400 justify-center items-center rounded-lg mb-2 py-1">
+        <div className="grid grid-cols-8 bg-red-900 text-white justify-center items-center rounded-lg mb-2 py-2">
           <p className="col-span-2 justify-center flex">Image</p>
           <p className="col-span-2 justify-center flex">Name</p>
           <p className="col-span-1 justify-center flex">Price</p>
@@ -20,16 +20,16 @@ const Cart = () => {
           <p className="col-span-1 justify-center flex">Total</p>
           <p className="col-span-1 justify-center flex">Remove</p>
         </div>
-        <div className="gap-1 flex flex-col">
+        <div className="gap-1 flex flex-col ">
           {food_list.map((item, index) => {
             if (cartItems[item._id] > 0) {
               return (
                 <div
                   key={index}
-                  className="grid grid-cols-8 bg-red-100 justify-center items-center rounded-lg "
+                  className="grid grid-cols-8 bg-red-50 justify-center items-center shadow-md rounded-lg "
                 >
                   <img
-                    className="col-span-2 h-24 rounded-l-lg"
+                    className="col-span-2 h-28 w-36 rounded-l-lg object-cover"
                     src={url+"/images/"+item.image}
                     alt="food"
                   />
@@ -50,7 +50,7 @@ const Cart = () => {
                     <img
                       src={assets.cross_icon}
                       alt="cross"
-                      className="w-3 cursor-pointer"
+                      className="w-5 cursor-pointer hover:bg-red-600 rounded-full p-1"
                     />
                   </button>
                 </div>
@@ -79,7 +79,7 @@ const Cart = () => {
           </div>
           <button
             onClick={() => navigate("/placeorder")}
-            className="bg-red-900 hover:bg-red-700 py-1 mt-4 rounded-lg lg:w-1/3"
+            className="bg-red-900 hover:bg-red-700 text-white py-1 mt-4 rounded-lg lg:w-1/3"
           >
             Proceed To Checkout
           </button>
@@ -95,7 +95,7 @@ const Cart = () => {
                 type="text"
                 placeholder="Promocode"
               />
-              <button className="bg-red-900 rounded-r-lg px-4 hover:bg-red-700  ">
+              <button className="bg-red-900 text-white rounded-r-lg px-4 hover:bg-red-700  ">
                 Apply
               </button>
             </div>

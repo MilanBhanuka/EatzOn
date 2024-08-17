@@ -12,7 +12,7 @@ const ExploreMenu = ({ category, setCategory }) => {
           return (
             <div onClick={()=>setCategory(prev=>prev===item.menu_name?"All":item.menu_name)} key={index} className="explore-menu-item cursor-pointer  min-w-36" >
               <img className={category===item.menu_name?" h-full w-full border-4 border-red-600 rounded-full":""} src={item.menu_image} alt="" />
-              <h2 className="mt-3 text-red-950">{item.menu_name}</h2>
+              <h2 className={category===item.menu_name?"mt-3 text-lg font-semibold text-red-600":"mt-3 text-red-950"}>{item.menu_name}</h2>
             </div>
           );
         })}

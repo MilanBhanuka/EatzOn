@@ -6,7 +6,7 @@ import List from './pages/List'
 import Orders from './pages/Orders'
 
 import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
