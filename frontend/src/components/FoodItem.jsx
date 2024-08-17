@@ -9,8 +9,8 @@ const FoodItem = ({ id, name, price, description, image }) => {
 
   return (
     <div className="rounded-lg hover:scale-105 shadow-lg relative">
-      <div className="food-item-image h-72 w-96">
-        <img className="rounded-t-lg h-72 w-96 object-cover " src={url+"/images/"+image} alt={name} />
+      <div className="food-item-image h-80 ">
+        <img className="rounded-t-lg h-80 w-full  object-cover" src={url+"/images/"+image} alt={name} />
         {!cartItems[id] 
         ? (
           <img 
@@ -37,7 +37,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           </div>
         )}
       </div>
-      <div className="px-4 py-3 h-full w-96">
+      <div className="px-4 py-3 h-full ">
         <div className="flex justify-between items-baseline">
           <h2 className="text-red-900 font-semibold text-sm md:text-xl">{name}</h2>
           <img src={assets.rating_starts} alt="star" className="w-10 h-3 md:w-20 md:h-5" />

@@ -68,7 +68,7 @@ const Navbar = ({setShowLogin}) => {
         <div className="relative group">
           <img src={assets.profile_icon} alt="user" className="h-6" />
           <ul className="absolute hidden text-lg right-0 top-6 bg-red-300 text-black  rounded-lg py-2 px-3 group-hover:flex flex-col border border-red-400">
-            <li className="cursor-pointer mx-5 py-1 hover:text-white flex gap-3 justify-center"><img className="h-8" src={assets.bag_icon} />Orders</li>
+            <li onClick={()=>navigate('/myorders')} className="cursor-pointer mx-5 py-1 hover:text-white flex gap-3 justify-center"><img className="h-8" src={assets.bag_icon} />Orders</li>
             <hr />
             <li onClick={logout} className="cursor-pointer mx-5 py-1 hover:text-white flex gap-3 justify-center"><img className="h-8" src={assets.logout_icon} />Logout</li>
           </ul>

@@ -10,7 +10,7 @@ const FoodDisplay = ({ category }) => {
   return (
     <div className=" md:mx-20 mx-10 mt-10 flex flex-col justify-center items-center" id="food-display">
       <h2 className="text-black font-bold text-2xl ">Top dishes near you</h2>
-        <div className="flex flex-wrap gap-10 mt-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-5">
           {food_list.map((item, index) => {
                 if(category==="All" || category===item.category){
                         return <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image}/>      
