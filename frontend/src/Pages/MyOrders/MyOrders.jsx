@@ -24,7 +24,7 @@ const MyOrders = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h2 className="text-3xl justify-center mt-5">My Orders</h2>
+      <h2 className="text-3xl justify-center font-semibold text-red-900 my-5">My Orders</h2>
       <div className="flex flex-col gap-2 ">
         {data.map((order, index) => {
           return (
@@ -41,8 +41,8 @@ const MyOrders = () => {
                 )}</p>
                   <p className="col-span-1">${order.amount}</p>
                   <p className="col-span-1">Items : {order.items.length} </p>
-                  <p className="col-span-2"><b className="text-green-700">{order.status}</b></p>
-                  <button className="col-span-1 bg-red-400 rounded-full text-xs py-1">Track Order</button>
+                  <p className="col-span-2"><b className={order.status==="Food Processing"?"text-green-700":order.status==="Out for Delivery"?"text-blue-700":"text-red-700 "}>{order.status}</b></p>
+                  <button onClick={fetchOrders} className="col-span-1 bg-red-400 rounded-full text-xs py-1">Track Order</button>
             </div>
           );
         })}
